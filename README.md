@@ -51,7 +51,7 @@ Then ask your agent:
 Use $inkify to write 永 in brush and ink for my homepage intro. Show me three takes to pick from.
 ```
 
-Or open [examples/zhang/out/index.html](examples/zhang/out/index.html) to see a finished page.
+To see a finished page, clone the repo and open [examples/zhang/out/index.html](examples/zhang/out/index.html) in a browser.
 
 ## Commands
 

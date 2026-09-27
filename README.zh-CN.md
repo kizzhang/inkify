@@ -51,7 +51,7 @@ git clone https://github.com/kizzhang/inkify.git "$env:USERPROFILE\.codex\skills
 使用 $inkify 把「永」做成我主页开场的毛笔书写动画，先写三遍给我挑。
 ```
 
-也可以直接打开 [examples/zhang/out/index.html](examples/zhang/out/index.html)，看一个做好的页面。
+想看做好的页面，克隆仓库后用浏览器打开 [examples/zhang/out/index.html](examples/zhang/out/index.html)。
 
 ## 命令入口
 
