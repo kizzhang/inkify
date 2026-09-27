@@ -43,7 +43,7 @@ git clone https://github.com/kizzhang/inkify.git ~/.claude/skills/inkify
 git clone https://github.com/kizzhang/inkify.git "$env:USERPROFILE\.codex\skills\inkify"
 ```
 
-Optional: `npm install` inside the folder adds `sharp`, which writes the ink atlas as WebP (about 3× smaller than PNG).
+Optional: `npm install` inside the folder adds `sharp`, which writes the ink atlas as WebP (about half the size of the PNG).
 
 Then ask your agent:
 

@@ -43,7 +43,7 @@ git clone https://github.com/kizzhang/inkify.git ~/.claude/skills/inkify
 git clone https://github.com/kizzhang/inkify.git "$env:USERPROFILE\.codex\skills\inkify"
 ```
 
-可选：在目录里运行 `npm install` 装上 `sharp`，墨迹图集会存成 WebP，比 PNG 小三倍左右。
+可选：在目录里运行 `npm install` 装上 `sharp`，墨迹图集会存成 WebP，大小约为 PNG 的一半。
 
 然后对 agent 说：
 

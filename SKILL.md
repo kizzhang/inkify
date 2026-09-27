@@ -18,7 +18,7 @@ ink rather than a vector wipe, and each is its own step:
    plain image when done. Pure CSS; it starts with the first paint of prerendered HTML.
 
 Run everything with `scripts/inkify.mjs` (Node 18+, no required dependencies; `sharp` makes the atlas a
-WebP about 3× smaller). All steps read and write one folder, so any step can be rerun alone.
+WebP about half the size). All steps read and write one folder, so any step can be rerun alone.
 
 ```bash
 node scripts/inkify.mjs doctor

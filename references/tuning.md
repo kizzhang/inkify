@@ -35,6 +35,6 @@ The ink depends on the timing (pools form where the brush rests), so rerun `rend
 
 ## Performance
 
-A 12-stroke character renders in under 10 s. The atlas is ~70–120 KB as WebP (~3× as PNG); preload it with
+A 12-stroke character renders in under 10 s. The atlas is ~70–120 KB as WebP (about twice that as PNG); preload it with
 `fetchpriority="high"`. At runtime at most 2–4 patterns are alive at once, and none after the character is
 written.

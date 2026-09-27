@@ -95,7 +95,7 @@ async function runRender(dir, character, timing) {
   const preview = previewPixels(result);
   fs.writeFileSync(path.join(dir, 'preview.png'), encodePNG(preview.pixels, preview.width, preview.height, 3));
   const kb = (fs.statSync(written).size / 1024).toFixed(0);
-  log(`atlas ${result.atlas.width}×${result.atlas.height}, ${kb} kB → ${written}${written.endsWith('.png') && !flags.png ? ' (install sharp for a ~3× smaller WebP)' : ''}`);
+  log(`atlas ${result.atlas.width}×${result.atlas.height}, ${kb} kB → ${written}${written.endsWith('.png') && !flags.png ? ' (install sharp for a WebP about half the size)' : ''}`);
   log(`finished ink → ${path.join(dir, 'preview.png')}  (${((Date.now() - started) / 1000).toFixed(1)} s)`);
   return manifest;
 }
@@ -114,7 +114,7 @@ async function main() {
       const major = Number(process.versions.node.split('.')[0]);
       log(`node ${process.versions.node} ${major >= 18 ? 'ok' : '— needs 18 or newer'}`);
       const sharp = await loadSharp();
-      log(sharp ? 'sharp found: the atlas is written as WebP' : 'sharp not found: the atlas is written as PNG (about 3× larger). For WebP: npm install sharp (in the skill folder or your project)');
+      log(sharp ? 'sharp found: the atlas is written as WebP' : 'sharp not found: the atlas is written as PNG (about twice the size of WebP). For WebP: npm install sharp (in the skill folder or your project)');
       log('fetch needs network access to cdn.jsdelivr.net (hanzi-writer-data); import works offline.');
       return;
     }
