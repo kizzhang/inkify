@@ -1,0 +1,4 @@
+node_modules/
+inkify-out/
+*.log
+.DS_Store

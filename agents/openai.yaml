@@ -1,0 +1,9 @@
+interface:
+  display_name: "inkify"
+  short_description: "Write a Chinese character in brush and ink, stroke by stroke, at a human rhythm"
+  icon_small: "./assets/icon-128.png"
+  icon_large: "./assets/icon-256.png"
+  brand_color: "#B0352A"
+  default_prompt: "Use $inkify to write 永 in brush and ink for my page: fetch the strokes, check each stroke's ending, write three takes for me to pick, render the ink and build a page that writes it."
+policy:
+  allow_implicit_invocation: true

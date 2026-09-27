@@ -1,0 +1,27 @@
+{
+  "name": "inkify",
+  "version": "0.1.0",
+  "description": "Agent skill that writes Chinese characters in brush-and-ink, stroke by stroke, at a human hand's rhythm.",
+  "license": "MIT",
+  "author": "Zhiyu Zhang",
+  "homepage": "https://github.com/kizzhang/inkify#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kizzhang/inkify.git"
+  },
+  "type": "module",
+  "bin": {
+    "inkify": "scripts/inkify.mjs"
+  },
+  "scripts": {
+    "example": "node scripts/inkify.mjs all examples/zhang/strokes.json --out examples/zhang/out",
+    "check": "node scripts/check.mjs"
+  },
+  "keywords": ["codex", "claude", "skill", "calligraphy", "chinese", "brush", "ink", "animation", "svg", "css"],
+  "optionalDependencies": {
+    "sharp": "^0.34.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

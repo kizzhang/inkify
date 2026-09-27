@@ -1,0 +1,39 @@
+/* inkify: a brush laying down ink; its animations (ink-write plus ink-press or ink-bleed, then ink-done) are inline. */
+.ink-brush {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dashoffset: 0;
+  /* Used where linear() is unsupported: the inline easings are then dropped. */
+  animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1);
+}
+/* Hidden until its stroke starts, so a brush is only painted while it writes. */
+@keyframes ink-write {
+  from { stroke-dashoffset: var(--ink-from); visibility: hidden; }
+  to { stroke-dashoffset: 0; }
+}
+/* Touch-down: the brush lands on its tip (--ink-land wide, in viewBox units) and presses to full width. */
+@keyframes ink-press {
+  from { stroke-width: var(--ink-land); }
+}
+/* 洇墨: the ink wicking into the paper behind the brush spreads in. */
+@keyframes ink-bleed {
+  from { opacity: 0; }
+}
+/* Once written, a brush hands over to a plain image of its ink (.ink-still), at the same moment (inline delay). */
+@keyframes ink-done {
+  from, to { visibility: hidden; }
+}
+.ink-still {
+  visibility: hidden;
+  animation: ink-show 1ms forwards;
+}
+@keyframes ink-show {
+  from, to { visibility: visible; }
+}
+/* Until the ink texture has arrived, hold the writing (add .ink-wait to an ancestor, remove it on load). */
+.ink-wait .ink-brush, .ink-wait .ink-still { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .ink-brush { display: none; }
+  .ink-still { animation: none; visibility: visible; }
+}
